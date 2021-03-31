@@ -32,7 +32,8 @@ body{
     margin-left: 33%;
 }
 .Femail:hover{
-    background-color: #29ABE2;
+    background-color: black;
+    color: white;
 }
 .SendEmail{
     color: black;
@@ -41,4 +42,15 @@ body{
     background-color: #29ABE2;
     border-radius: 10px ;
 }
-
+.loginForm{
+    background-color: #141414;
+    color:white;
+    border: 3px solid white;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: Russo One;
+}
+.loginForm:hover{
+    background-color: black;
+    color: white;
+}

@@ -15,7 +15,7 @@
 <!--Navbar Content-->
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark "">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
             <img src="img/Logo.png" alt="" width="160px" height="50px">
@@ -25,7 +25,17 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
             </ul>
-            <button class="btn Signin" >Sign in</button>
+            <div class="dropdown">
+                <a class="btn Signin" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sign In
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background-color: black;">
+                  <button class="btn Signin" data-bs-toggle="modal" data-bs-target="#modalLogin" >Login</button>
+                  <button class="btn Signin" data-bs-toggle="modal" data-bs-target="#modalRegister" >Register</button>
+                </ul>
+              </div>
+              
             <form class="d-flex">
             <button class="btn Contact" >Contact us</button>
             </form>
@@ -35,12 +45,59 @@
 <!--End NavBar Content-->
 <h4  class="text-center titleWelcome">Welcome to Codemone</h4>
 <h1  class="text-center slogan" style="font-family: Russo One;color: white;">Start Building Your Life</h1>
+
 <!--Form Email-->
 <form action="#" method="POST">
-    <input type="email" placeholder="Enter Your Email" class="form-control Femail">
-    <button type="submit" class="SendEmail">Send</button>
+   
+    <input type="email" placeholder="Enter Your Email" name="emailForm" class="form-control Femail">
+    <div>
+       <button type="submit" class="SendEmail">Send</button>
+    </div>
 </form>
+<!--End Form Mail-->
 
+
+<!-- Modals Contents-->
+
+<div id="modalLogin" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content mLogin" style="background-color: #141414;color: white;">
+        <div class="modal-header">
+          <h5 class="modal-title" style="font-family: Russo One;">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <input type="text" placeholder="Username" name="UsernameLoginInput" class="form-control loginForm">
+            <input type="password" placeholder="Password" name="PasswordLoginInput" class="form-control loginForm">
+        </div>
+        <div class="modal-footer">
+          <button class="btn Signin" type="menu" data-bs-target="#modalRegister">Register</button>
+          <button type="submit" class="btn Contact">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalRegister" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content mLogin" style="background-color: #141414;color: white;">
+        <div class="modal-header">
+          <h5 class="modal-title" style="font-family: Russo One;">Register</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <input type="text" placeholder="Username" name="UsernameRegisterInput" class="form-control loginForm">
+            <input type="text" placeholder="Email" name="EmailRegisterInput" class="form-control loginForm">
+            <input type="password" placeholder="Password" name="pswRegisterInput" class="form-control loginForm">
+            <input type="password" placeholder="Password Confirm" name="psw2RegisterInput" class="form-control loginForm">
+        </div>
+        <div class="modal-footer">
+          <button class="btn Signin" data-bs-toggle="modal" type="menu" data-bs-target="#modalLogin">Login</button>
+          <button type="submit" class="btn Contact">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <!--JS Links-->
 <script src="public/js/main.js"></script>
