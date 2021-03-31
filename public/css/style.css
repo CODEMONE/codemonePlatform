@@ -7,7 +7,38 @@ body{
 .Contact{
     background-color: #29ABE2;
 }
+.Contact:hover {
+    background-color:white;
+}
 .Signin{
     color: white;
      margin-right: 20px;
 }
+.Signin:hover{
+    color: #29ABE2;
+}
+.titleWelcome{
+    color: #29ABE2;
+    margin-top: 40px;
+    font-family: Russo One;
+}
+.Femail{
+    background-color: #141414;
+    color:white;
+    border: 3px solid white;
+    margin-top: 40px;
+    width: 35%;
+    font-family: Russo One;
+    margin-left: 33%;
+}
+.Femail:hover{
+    background-color: #29ABE2;
+}
+.SendEmail{
+    color: black;
+    border: none;
+    font-family: Russo One;
+    background-color: #29ABE2;
+    border-radius: 10px ;
+}
+
